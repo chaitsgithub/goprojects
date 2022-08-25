@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "chaitsgithub/goprojects/go-gRPC/calculator";
+
+package calculator;
+
+// The calculator service definition.
+service Calculator {
+    // Adds two number
+    rpc Add(Input) returns (Output);
+}
+
+// Input message containing two operands
+message Input {
+    int32 Operand1 = 1;
+    int32 Operand2 = 2;
+}
+
+// Output message containing result of operation
+message Output {
+    int32 Result = 1;
+}

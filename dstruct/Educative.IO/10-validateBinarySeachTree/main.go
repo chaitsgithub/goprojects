@@ -51,17 +51,24 @@ func (t *Tree) printPreOrder(node *TreeNode, ind string) {
 	t.printPreOrder(node.rightNode, "RIGHT")
 }
 
-func (t *Tree) countVisibleNodes(node *TreeNode, maxSoFar int) int {
+func (t *Tree) isValidBinarySearchTree(node *TreeNode, maxSoFar, minSoFar int) bool {
 	if node == nil {
-		return 0
-	} else if node.data > maxSoFar {
-		fmt.Printf("Visible Node Found : %d; Max So Far : %d\n", node.data, maxSoFar)
-		return 1 + t.countVisibleNodes(node.leftNode, node.data) + t.countVisibleNodes(node.rightNode, node.data)
-	} else {
-		return t.countVisibleNodes(node.leftNode, node.data) + t.countVisibleNodes(node.rightNode, node.data)
+		return true
+	}
+	if node.data < minSoFar {
+		minSoFar = node.data
 	}
 
-	return -1
+	if node.data > maxSoFar {
+		maxSoFar = node.data
+	}
+
+	if node.leftNode.data > minSoFar || node.rightNode.data < maxSoFar {
+		fmt.Printf("Invalid Node; N : %d, L: %d, R: %d, min: %d, max: %d \n", node.data, node.leftNode.data, node.rightNode.data, minSoFar, maxSoFar)
+		return false
+	}
+
+	return t.isValidBinarySearchTree(node.leftNode, maxSoFar, minSoFar) && t.isValidBinarySearchTree(node.leftNode, maxSoFar, minSoFar)
 }
 
 func getMax(x, y int) int {
@@ -80,5 +87,5 @@ func main() {
 		t.InsertNode(i)
 	}
 
-	fmt.Printf("Count of Visible Nodes is %d", t.countVisibleNodes(t.root, 0))
+	fmt.Printf("Binary Search Tree is %v", t.isValidBinarySearchTree(t.root, t.root.data, t.root.data))
 }

@@ -51,12 +51,16 @@ func (t *Tree) printPreOrder(node *TreeNode, ind string) {
 	t.printPreOrder(node.rightNode, "RIGHT")
 }
 
-func (t *Tree) getMaxTreeDepth(node *TreeNode) int {
+func (t *Tree) countVisibleNodes(node *TreeNode, maxSoFar int) int {
 	if node == nil {
 		return 0
+	} else if node.data > maxSoFar {
+		fmt.Printf("Visible Node Found : %d; Max So Far : %d\n", node.data, maxSoFar)
+		return 1 + t.countVisibleNodes(node.leftNode, node.data) + t.countVisibleNodes(node.rightNode, node.data)
 	} else {
-		return getMax(t.getMaxTreeDepth(node.leftNode), t.getMaxTreeDepth(node.rightNode)) + 1
+		return t.countVisibleNodes(node.leftNode, node.data) + t.countVisibleNodes(node.rightNode, node.data)
 	}
+
 	return -1
 }
 
@@ -75,7 +79,6 @@ func main() {
 	for _, i := range arr {
 		t.InsertNode(i)
 	}
-	//t.printPreOrder(t.root, "ROOT")
 
-	fmt.Printf("Max Tree Depth is %d", t.getMaxTreeDepth(t.root))
+	fmt.Printf("Count of Visible Nodes is %d", t.countVisibleNodes(t.root, 0))
 }
