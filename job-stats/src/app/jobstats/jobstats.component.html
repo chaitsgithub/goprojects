@@ -1,0 +1,97 @@
+<p-table #dt [value]="jobstats" [(selection)]="selectedJobs" dataKey="id" styleClass="p-datatable-sm" [rowHover]="true" 
+            [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [loading]="loading"
+            [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [filterDelay]="0" [globalFilterFields]="['jobName','status']"
+            [tableStyle]="{'min-width': '50rem'}">
+            <!-- styleClass="p-datatable-customers" -->
+            <ng-template pTemplate="caption">
+                <div class="table-header">
+                    Jobs Run Details
+                    <!-- <span class="p-input-icon-left">
+                        <i class="pi pi-search"></i>
+                        <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="Global Search" />
+                    </span> -->
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <!-- <th style="width: 3rem"></th> -->
+                    <th pSortableColumn="jobName">Job Name<p-sortIcon field="jobName"></p-sortIcon></th>
+                    <th pSortableColumn="runDate">Run Date<p-sortIcon field="runDate"></p-sortIcon></th>
+                    <th pSortableColumn="jobID">Job ID<p-sortIcon field="jobID"></p-sortIcon></th>
+                    <th pSortableColumn="startTime">Job Start Time<p-sortIcon field="startTime"></p-sortIcon></th>
+                    <th pSortableColumn="endTime">Job End Time<p-sortIcon field="endTime"></p-sortIcon></th>
+                    <th pSortableColumn="runTime">Total Run Time<p-sortIcon field="runTime"></p-sortIcon></th>
+                    <th pSortableColumn="status">Job Status<p-sortIcon field="status"></p-sortIcon></th>
+                </tr>
+                <tr>
+                    <!-- <th><p-tableHeaderCheckbox></p-tableHeaderCheckbox></th> -->
+                    <th>
+                        <input pInputText type="text" (input)="dt.filter($any($event.target).value, 'jobName', 'contains')" placeholder="Search by Job Name" class="p-column-filter">
+                    </th>
+                    <!-- <th>
+                        <p-calendar (onSelect)="onDateSelect($event)" 
+                        (onClearClick)="dt.filter('', 'runDate', 'equals')" [showButtonBar]="true" styleClass="p-column-filter" 
+                        placeholder="Job Run Date" [readonlyInput]="true" dateFormat="yy-mm-dd"></p-calendar>
+                    </th> -->
+                    <th>
+                        <input pInputText type="text" (input)="dt.filter($any($event.target).value, 'runDate', 'contains')" placeholder="Search by Run Date" class="p-column-filter">
+                    </th>
+                    <th></th>   <!--Job ID-->
+                    <th></th>   <!--Start Time-->
+                    <th></th>   <!--End Time-->
+                    <th></th>   <!--Run Time-->
+
+                    <!-- <th>
+                        <p-dropdown [options]="statuses" (onChange)="dt.filter($event.value, 'status', 'equals')" styleClass="p-column-filter" placeholder="Select a Status" [showClear]="true">
+                            <ng-template let-option pTemplate="item">
+                                <span [class]="'customer-badge status-' + option.value">&#123;&#123;option.label&#125;&#125;</span>
+                            </ng-template>
+                        </p-dropdown>
+                    </th> -->
+                    <th>
+                        <input pInputText type="text" (input)="dt.filter($any($event.target).value, 'status', 'contains')" placeholder="Search by Job Status" class="p-column-filter">
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-jobstats>
+                <tr class="p-selectable-row">
+                    <!-- <td>
+                        <p-tableCheckbox [value]="customer"></p-tableCheckbox>
+                    </td> -->
+                    <td>
+                        <span class="p-column-title">Job Name</span>
+                        {{jobstats.jobName}}
+                    </td>
+                    <td>
+                        <span class="p-column-title">Run Date</span>
+                        {{jobstats.runDate}}
+                    </td>
+                    <td>
+                        <span class="p-column-title">Job ID</span>
+                        {{jobstats.jobID}}
+                    </td>
+                    <td>
+                        <span class="p-column-title">Job Start Time</span>
+                        {{jobstats.startTime}}
+                    </td>
+                    <td>
+                        <span class="p-column-title">Job End Date</span>
+                        {{jobstats.endTime}}
+                    </td>
+                    <td>
+                        <span class="p-column-title">Total Run Time</span>
+                        {{jobstats.runTime}}
+                    </td>
+                    <td>
+                        <span class="p-column-title">Job Status</span>
+                        <span [class]="'customer-badge status-' + jobstats.status">{{jobstats.status}}</span>
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage">
+                <tr>
+                    <td colspan="8">No jobs found.</td>
+                </tr>
+            </ng-template>
+        </p-table>

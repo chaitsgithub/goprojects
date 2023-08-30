@@ -1,0 +1,166 @@
+{
+    "data": [
+      {
+        "jobName": "J01TRAXETLTDAPDEALS4",
+        "runDate": "01-01-22",
+        "jobID": 1,
+        "startTime": "01-01-22 5.00",
+        "endTime": "01-01-22 5.30",
+        "runTime": 30,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLTDAPDEALS4",
+        "runDate": "02-01-22",
+        "jobID": 2,
+        "startTime": "02-01-22 5.00",
+        "endTime": "02-01-22 5.35",
+        "runTime": 35,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLTDAPDEALS4",
+        "runDate": "03-01-22",
+        "jobID": 3,
+        "startTime": "03-01-22 5.00",
+        "endTime": "03-01-22 5.32",
+        "runTime": 32,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLTDAPDEALS4",
+        "runDate": "04-01-22",
+        "jobID": 4,
+        "startTime": "04-01-22 5.00",
+        "endTime": "04-01-22 6.00",
+        "runTime": 60,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLTDAPDEALS4",
+        "runDate": "05-01-22",
+        "jobID": 5,
+        "startTime": "05-01-22 5.00",
+        "endTime": "05-01-22 5.45",
+        "runTime": 45,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLTDAPDEALS4",
+        "runDate": "06-01-22",
+        "jobID": 6,
+        "startTime": "06-01-22 5.00",
+        "endTime": "06-01-22 5.52",
+        "runTime": 52,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLTDAPDEALS4",
+        "runDate": "07-01-22",
+        "jobID": 7,
+        "startTime": "07-01-22 5.00",
+        "endTime": "07-01-22 5.23",
+        "runTime": 23,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLTDAPDEALS4",
+        "runDate": "08-01-22",
+        "jobID": 8,
+        "startTime": "08-01-22 5.00",
+        "endTime": "08-01-22 5.37",
+        "runTime": 37,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLTDAPDEALS4",
+        "runDate": "09-01-22",
+        "jobID": 9,
+        "startTime": "09-01-22 5.00",
+        "endTime": "09-01-22 5.53",
+        "runTime": 53,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLMASCD",
+        "runDate": "01-01-22",
+        "jobID": 10,
+        "startTime": "01-01-22 5.00",
+        "endTime": "01-01-22 6.30",
+        "runTime": 90,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLMASCD",
+        "runDate": "02-01-22",
+        "jobID": 11,
+        "startTime": "02-01-22 5.00",
+        "endTime": "02-01-22 6.20",
+        "runTime": 80,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLMASCD",
+        "runDate": "03-01-22",
+        "jobID": 12,
+        "startTime": "03-01-22 5.00",
+        "endTime": "03-01-22 6.27",
+        "runTime": 87,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLMASCD",
+        "runDate": "04-01-22",
+        "jobID": 13,
+        "startTime": "04-01-22 5.00",
+        "endTime": "04-01-22 7.00",
+        "runTime": 120,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLMASCD",
+        "runDate": "05-01-22",
+        "jobID": 14,
+        "startTime": "05-01-22 5.00",
+        "endTime": "05-01-22 8.00",
+        "runTime": 180,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLMASCD",
+        "runDate": "06-01-22",
+        "jobID": 15,
+        "startTime": "06-01-22 5.00",
+        "endTime": "06-01-22 6.25",
+        "runTime": 85,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLMASCD",
+        "runDate": "07-01-22",
+        "jobID": 16,
+        "startTime": "07-01-22 5.00",
+        "endTime": "07-01-22 6.05",
+        "runTime": 65,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLMASCD",
+        "runDate": "08-01-22",
+        "jobID": 17,
+        "startTime": "08-01-22 5.00",
+        "endTime": "08-01-22 6.10",
+        "runTime": 70,
+        "status": "success"
+      },
+      {
+        "jobName": "J01TRAXETLMASCD",
+        "runDate": "09-01-22",
+        "jobID": 18,
+        "startTime": "09-01-22 5.00",
+        "endTime": "09-01-22 6.40",
+        "runTime": 100,
+        "status": "success"
+      }
+    ]     
+}
