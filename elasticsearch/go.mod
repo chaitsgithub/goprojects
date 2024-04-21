@@ -1,4 +1,4 @@
-module chaitsgithub/goprojects/elasticsearch
+module github.com/chaitsgithub/goprojects/elasticsearch
 
 go 1.17
 
